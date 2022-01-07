@@ -8,24 +8,32 @@ let index = 0;
 const nextSlide = () => {
     if (index < images.length - 1) {
         images[index].classList.remove("active");
+        indicators[index].classList.remove("cercle-active");
         index++;
         images[index].classList.add("active");
+        indicators[index].classList.add("cercle-active");
     } else {
         images[index].classList.remove("active");
+        indicators[index].classList.remove("cercle-active");
         index = 0;
         images[index].classList.add("active");
+        indicators[index].classList.add("cercle-active");
     }
 };
 
 const prevSlide = () => {
     if (index > 0) {
         images[index].classList.remove("active");
+        indicators[index].classList.remove("cercle-active");
         index--;
         images[index].classList.add("active");
+        indicators[index].classList.add("cercle-active");
     } else if (index === 0) {
         images[index].classList.remove("active");
+        indicators[index].classList.remove("cercle-active");
         index = images.length - 1;
         images[index].classList.add("active");
+        indicators[index].classList.add("cercle-active");
     }
 };
 
